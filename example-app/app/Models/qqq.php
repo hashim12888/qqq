@@ -9,9 +9,11 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 use Illuminate\Database\Eloquent\Model;
  
-class Contact extends Model
+class qqq extends Model
 {
-    protected $table = 'contacts';
+    protected $table = 'qqq';
     protected $primaryKey = 'id';
-    protected $fillable = ['name', 'address', 'mobile'];
+    protected $fillable = ['namep', 'emailp', 'numbp'];
+    const CREATED_AT = 'created_at';
+    const UPDATED_AT = 'updated_at';
 }

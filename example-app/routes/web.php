@@ -15,3 +15,7 @@ use App\Http\Controllers\P;
 */
 
 Route::get('/', [P::class,'show']);
+Route::get('/add', [P::class,'create']);
+Route::post('/contact', [P::class,'store']);Route::get('/{id}/edit', [P::class,'edit']);
+Route::patch('/update/{id}', [P::class,'update']);
+Route::delete('/{id}/delete', [P::class,'delete']);

@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="add">add</a>
+          <a class="nav-link active" aria-current="page" href="#">add</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">edit</a>
@@ -37,38 +37,20 @@
     </div>
   </div>
 </nav>
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">id</th>
-      <th scope="col">name</th>
-      <th scope="col">email</th>
-      <th scope="col"></th>
-      <th scope="col"></th>
+  <div class="card">
+  <div class="card-header">Contactus Page</div>
+  <div class="card-body">
       
-    </tr>
-  </thead>
-  <tbody>
-  @foreach ($p as $pp)<tr>
-      <th scope="row">{{$pp->id}}</th>
-      <td>{{$pp->id}}</td>
-      <td>{{$pp->id}}</td>
-      <td><a href="{{ url('/' . $pp->id . '/edit') }}" title="Edit Student"><button class="btn btn-primary btn-sm"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</button></a></td>
-      <td><form method="POST" action="{{ url('/' . $pp->id. '/delete') }}" accept-charset="UTF-8" style="display:inline">
-                                                {{ method_field('DELETE') }}
-                                                {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Contact" onclick="return confirm(&quot;Confirm delete?&quot;)"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</button>
-                                            </form></td>
-      
-    
-    
-
-  @endforeach </tbody>
-</table>
-
-</ul>
-
-    
-	<script src="index.js"></script>
-  </body>
-  </html>
+      <form action="/contact" method="POST">
+    @csrf
+        <label>namep</label></br>
+        <input type="text" name="namep" id="namep" class="form-control"></br>
+        <label>emailp</label></br>
+        <input type="text" name="emailp" id="emailp" class="form-control"></br>
+        <label>numbp</label></br>
+        <input type="text" name="numbp" id="numbp" class="form-control"></br>
+        <input type="submit" value="Save" class="btn btn-success"></br>
+    </form>
+</div>
+</div>
+</div>
